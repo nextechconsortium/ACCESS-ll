@@ -30,13 +30,6 @@ const features = [
     color: "from-[#2066c3] to-[#1a5aaa]",
   },
   {
-    icon: Bot,
-    title: "AI Assistant",
-    description: "Get instant answers and personalized guidance powered by advanced AI technology.",
-    href: "/ai-assistant",
-    color: "from-[#26a69a] to-[#1e8a7f]",
-  },
-  {
     icon: MessageCircle,
     title: "Community Chat",
     description: "Join discussions, share experiences, and network with fellow students and professionals.",
