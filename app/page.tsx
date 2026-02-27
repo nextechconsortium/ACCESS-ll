@@ -28,20 +28,6 @@ const features = [
     color: "from-[#2066c3] to-[#1a5aaa]",
   },
   {
-    icon: Bot,
-    title: "AI Assistant",
-    description: "Get instant answers and personalized guidance powered by advanced AI technology.",
-    href: "/ai-assistant",
-    color: "from-[#26a69a] to-[#1e8a7f]",
-  },
-  {
-    icon: MessageCircle,
-    title: "Community Chat",
-    description: "Join discussions, share experiences, and network with fellow students and professionals.",
-    href: "/chatbox",
-    color: "from-[#2573d4] to-[#2066c3]",
-  },
-  {
     icon: Briefcase,
     title: "Career Opportunities",
     description: "Discover internships, jobs, and career paths tailored to your interests and skills.",
