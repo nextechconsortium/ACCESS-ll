@@ -702,7 +702,8 @@ export default function ScholarshipsPage() {
                 {filteredScholarships.map((scholarship) => (
                   <Card
                     key={scholarship.id}
-                    className={`futuristic-card hover:scale-105 transition-all duration-300 ${getPriorityColor(scholarship.priority)}`}
+                    className={`futuristic-card transition-shadow duration-300 hover:shadow-2xl ${getPriorityColor(scholarship.priority)}`}
+
                   >
                     <CardHeader>
                       <div className="flex items-start justify-between mb-2">
