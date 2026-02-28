@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import { useParams } from "next/navigation"
+import { useState, useEffect } from "react"
+import { useParams, useRouter } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -24,7 +24,14 @@ import { allCourses, type ProgrammeLevel } from "@/lib/careers-data"
 
 export default function CareerDetailPage() {
   const params = useParams()
+  const router = useRouter()
   const [showMentorModal, setShowMentorModal] = useState(false)
+  const [canGoBack, setCanGoBack] = useState(false)
+
+  useEffect(() => {
+    // Check if we can go back in history (navigation came from careers page)
+    setCanGoBack(window.history.length > 1)
+  }, [])
 
   // Decode URL parameters
   const decodedLevel = decodeURIComponent(params.level as string) as ProgrammeLevel
@@ -67,10 +74,19 @@ export default function CareerDetailPage() {
           {/* Header Section */}
           <div className="mb-8">
             {/* Breadcrumb */}
-            <Link href="/careers" className="inline-flex items-center gap-2 text-[#4a90d9] hover:text-[#6aa3e5] transition-colors mb-6">
+            <button
+              onClick={() => {
+                if (canGoBack) {
+                  router.back()
+                } else {
+                  router.push("/careers")
+                }
+              }}
+              className="inline-flex items-center gap-2 text-[#4a90d9] hover:text-[#6aa3e5] transition-colors mb-6"
+            >
               <ArrowLeft className="h-4 w-4" />
               Back to Careers
-            </Link>
+            </button>
 
             {/* Title & Badges */}
             <div className="mb-6">
@@ -196,15 +212,20 @@ export default function CareerDetailPage() {
                 <Users className="h-5 w-5 mr-2" />
                 Find a Mentor in This Field
               </Button>
-              <Link href="/careers" className="flex-1">
-                <Button
-                  variant="outline"
-                  className="w-full border-[#2066c3]/30 text-[#4a90d9] hover:bg-[#2066c3]/10"
-                >
-                  <ArrowLeft className="h-5 w-5 mr-2" />
-                  Back
-                </Button>
-              </Link>
+              <Button
+                onClick={() => {
+                  if (canGoBack) {
+                    router.back()
+                  } else {
+                    router.push("/careers")
+                  }
+                }}
+                variant="outline"
+                className="flex-1 border-[#2066c3]/30 text-[#4a90d9] hover:bg-[#2066c3]/10"
+              >
+                <ArrowLeft className="h-5 w-5 mr-2" />
+                Back
+              </Button>
             </div>
           </div>
         </main>
