@@ -1506,15 +1506,18 @@ const degreeCourses: Course[] = [
     programmeLevel: "Degree",
     category: "Computing & ICT",
     description:
-      "A four-year programme covering algorithms, software engineering, databases, artificial intelligence, and computer systems. One of the most popular tech programmes in Kenya.",
+      "A degree program that focuses on the study of computers, software systems, programming, data processing, and computational problem-solving. It equips students with knowledge and skills needed to design software, develop applications, manage data systems, and build modern technological solutions.",
     kcseRequirements:
-      "Mean grade B+ (plus). Must have B+ in Mathematics, B in Physics and English.",
+      "KCSE Mean Grade: C+ and above. Mathematics (very important), Physics or any science subject, English or Kiswahili, Any Group II subject. Typical cluster cut-off: 38-46 points.",
     careerPaths: [
-      "Software Engineer",
-      "Data Scientist",
+      "Software Developer",
       "Systems Analyst",
-      "AI/Machine Learning Engineer",
-      "Cybersecurity Analyst",
+      "Web Developer",
+      "Data Scientist",
+      "Cybersecurity Specialist",
+      "Network Administrator",
+      "AI Engineer",
+      "Mobile App Developer",
     ],
     institutions: [
       "University of Nairobi",
@@ -1523,9 +1526,111 @@ const degreeCourses: Course[] = [
       "Kenyatta University",
       "Maseno University",
       "Dedan Kimathi University of Technology",
+      "Mount Kenya University",
     ],
     sourceCitation:
       "KUCCPS Programme Catalogue; University of Nairobi School of Computing — https://computing.uonbi.ac.ke",
+    aboutCareer:
+      "Bachelor of Science in Computer Science is a degree program that focuses on the study of computers, software systems, programming, data processing, and computational problem-solving. It combines mathematics, programming, algorithms, and computer systems to prepare students for careers in the fast-growing technology industry. It is ideal for students interested in technology, coding, innovation, and logical problem-solving.",
+    academicStructure:
+      "4 years (8 semesters). Year 1: Introduction to Computer Science, Programming Fundamentals, Discrete Mathematics, Computer Organization, Communication Skills. Year 2: Data Structures and Algorithms, Object-Oriented Programming, Database Systems, Operating Systems, Software Engineering. Year 3: Computer Networks, Artificial Intelligence, Web Development, Cybersecurity Basics, Human-Computer Interaction. Year 4: Machine Learning, Cloud Computing, Mobile Application Development, Research Project, Professional Ethics in Computing.",
+    technicalSkills: [
+      "Programming and software development",
+      "Problem-solving and logical thinking",
+      "Database management",
+      "System design and analysis",
+      "Cybersecurity awareness",
+      "Data analysis skills",
+    ],
+    softSkills: [
+      "Problem-solving ability",
+      "Creativity and innovation",
+      "Team collaboration",
+      "Communication skills",
+      "Time management",
+      "Continuous learning mindset",
+    ],
+    careerPathways: [
+      {
+        title: "Software Development",
+        description: "Develop desktop, web, and mobile applications. Work in software companies or as independent developer.",
+      },
+      {
+        title: "Data Science & Analytics",
+        description: "Analyze large datasets, build predictive models, and help organizations make data-driven decisions.",
+      },
+      {
+        title: "Artificial Intelligence & Machine Learning",
+        description: "Develop AI systems, machine learning models, and intelligent automation solutions.",
+      },
+      {
+        title: "Cybersecurity",
+        description: "Protect systems and networks from cyber threats, conduct security audits, and develop security solutions.",
+      },
+    ],
+    thingsToConsider: [
+      {
+        challenge: "Requires strong problem-solving skills",
+        description: "Computer Science demands logical thinking and ability to break down complex problems.",
+      },
+      {
+        challenge: "Continuous learning needed",
+        description: "Technology changes rapidly. You'll need to continuously learn new languages and frameworks.",
+      },
+      {
+        challenge: "Can involve long coding hours",
+        description: "Development work sometimes requires extended focus periods and debugging sessions.",
+      },
+    ],
+    detailedInstitutions: [
+      { type: "public", name: "University of Nairobi - School of Computing", location: "Nairobi", notes: "Kenya's premier computer science programme" },
+      { type: "public", name: "JKUAT - School of Computing", location: "Nairobi", notes: "Strong technical focus" },
+      { type: "private", name: "Strathmore University - School of Computing", location: "Nairobi", notes: "Leading private CS programme" },
+    ],
+    clusterRequirements:
+      "Compulsory: English/Kiswahili. Core subjects: Mathematics (very important), Physics or any science subject. Mean grade C+ and above from best four subjects.",
+    cutoffHistory: [
+      {
+        year: 2024,
+        ranges: { high: 42, mid: 38, low: 35 },
+        notes: "High demand for CS graduates with strong competitive cutoffs.",
+      },
+    ],
+    jobMarketTrends: {
+      demandOutlook:
+        "Computer Science is one of the most marketable degrees. Global demand is extremely high with constant shortage of skilled developers. Kenya's tech sector is booming.",
+      trends: [
+        "Extremely high global demand for software developers",
+        "Growing importance of AI and Machine Learning",
+        "Cloud computing skills highly sought after",
+        "Cybersecurity specialists in critical demand",
+        "Remote work opportunities widespread globally",
+      ],
+      challenges: [
+        "Requires strong problem-solving skills",
+        "Fast-changing technology requires continuous upskilling",
+        "High-pressure deadlines and long coding hours",
+      ],
+    },
+    salaryInsights: {
+      entryLevel: "KES 60,000 - 120,000/month",
+      midCareer: "KES 150,000 - 300,000/month",
+      seniorLevel: "KES 400,000+/month",
+    },
+    funFacts: [
+      {
+        fact: "Computer Science is one of the fastest-growing fields globally.",
+        category: "surprising",
+      },
+      {
+        fact: "Kenya has one of Africa's most vibrant tech startup scenes.",
+        category: "kenya-specific",
+      },
+      {
+        fact: "Remote tech jobs can pay 2-3x more than equivalent jobs in Kenya.",
+        category: "surprising",
+      },
+    ],
   },
   {
     id: "d-ict-002",
@@ -1638,13 +1743,16 @@ const degreeCourses: Course[] = [
     description:
       "A four-year programme covering accounting, finance, marketing, human resource management, and business administration. One of Kenya's most enrolled programmes.",
     kcseRequirements:
-      "Mean grade B (plain). Must have B in Mathematics, C+ in English.",
+      "Mean grade C+ and above. Mathematics (highly recommended), Business Studies or Economics, English or Kiswahili, Strong math skills important for finance tracks.",
     careerPaths: [
       "Accountant",
       "Financial Analyst",
       "Marketing Manager",
       "Human Resource Manager",
       "Auditor",
+      "Business Consultant",
+      "Supply Chain Manager",
+      "Digital Marketing Specialist",
     ],
     institutions: [
       "University of Nairobi",
@@ -1653,9 +1761,143 @@ const degreeCourses: Course[] = [
       "Moi University",
       "Egerton University",
       "JKUAT",
+      "Mount Kenya University",
+      "United States International University Africa",
     ],
     sourceCitation:
       "KUCCPS Programme Catalogue; University of Nairobi Faculty of Commerce — https://business.uonbi.ac.ke",
+    aboutCareer:
+      "Bachelor of Commerce is a business degree that focuses on trade, finance, management, economics, and organizational operations. It prepares students to understand how businesses work—from managing money and marketing products to making strategic decisions and running organizations. BCom is one of the most flexible and popular degrees because it opens doors to many careers in business, finance, entrepreneurship, and corporate leadership. Unlike general business studies in high school, BCom provides deeper knowledge in financial systems, business management, economic analysis, corporate operations, and investment and accounting.",
+    academicStructure:
+      "4 years (8 semesters) with specialization starting in Year 2-3. Years 1-2: Business Foundations including Principles of Accounting, Business Law, Economics (Micro & Macro), Business Mathematics, Marketing Fundamentals, Management Principles. Years 3-4: Specialization in areas such as Accounting, Finance, Marketing, Human Resource Management, Procurement & Supply Chain, Banking & Insurance, or Entrepreneurship. Most programs include internships or business projects.",
+    technicalSkills: [
+      "Financial analysis",
+      "Business strategy development",
+      "Market research",
+      "Budgeting and planning",
+      "Data interpretation",
+      "Accounting proficiency",
+      "Financial forecasting",
+    ],
+    softSkills: [
+      "Leadership and teamwork",
+      "Communication and negotiation",
+      "Decision-making",
+      "Problem-solving",
+      "Entrepreneurial thinking",
+      "Project management",
+    ],
+    careerPathways: [
+      {
+        title: "Accounting & Finance",
+        description: "Work as accountant, auditor, or financial analyst in corporations, firms, or government. Pursue professional certifications like CPA or ACCA for advancement.",
+      },
+      {
+        title: "Marketing & Sales",
+        description: "Lead marketing departments, develop business strategies, and manage sales operations in various industries.",
+      },
+      {
+        title: "Human Resources",
+        description: "Manage organizational talent, recruitment, training, and employee relations as an HR officer or consultant.",
+      },
+      {
+        title: "Business Analysis & Consulting",
+        description: "Analyze business problems, recommend solutions, and help organizations improve efficiency and profitability.",
+      },
+      {
+        title: "Entrepreneurship",
+        description: "Start and manage your own business in retail, consulting, import/export, or digital enterprises.",
+      },
+    ],
+    thingsToConsider: [
+      {
+        challenge: "Highly Competitive Job Market",
+        description: "Entry-level roles are competitive without experience or professional certifications. Build your network and gain internship experience early.",
+      },
+      {
+        challenge: "Professional Certifications Required",
+        description: "Success in top roles often requires additional certifications like CPA, ACCA, or CIM. Plan for ongoing education and certification costs.",
+      },
+      {
+        challenge: "Continuous Learning",
+        description: "Business environments and technologies evolve rapidly. You'll need to stay updated with industry trends and developments.",
+      },
+      {
+        challenge: "Work-Life Balance",
+        description: "Depending on specialization, some roles like investment banking or consulting may require long hours and high-pressure environments.",
+      },
+    ],
+    detailedInstitutions: [
+      { type: "public", name: "University of Nairobi", location: "Nairobi", notes: "One of the most prestigious business schools in East Africa" },
+      { type: "public", name: "Kenyatta University", location: "Nairobi", notes: "Offers many BCom specializations" },
+      { type: "public", name: "Moi University", location: "Eldoret", notes: "Strong focus on finance and entrepreneurship" },
+      { type: "public", name: "JKUAT", location: "Nairobi", notes: "Integrates business with technology" },
+      { type: "private", name: "Strathmore University", location: "Nairobi", notes: "Kenya's leading business school with international reputation" },
+      { type: "private", name: "United States International University Africa", location: "Nairobi", notes: "Strong international business focus" },
+      { type: "private", name: "Mount Kenya University", location: "Nairobi", notes: "Wide specialization options" },
+    ],
+    clusterRequirements:
+      "Compulsory: English/Kiswahili. Core subjects: Mathematics (highly recommended), Business Studies or Economics. Mean grade C+ and above calculated from best four subjects.",
+    cutoffHistory: [
+      {
+        year: 2024,
+        ranges: { high: 38, mid: 34, low: 31 },
+        notes: "Moderate competition levels. Mid-tier universities accept lower scores than top universities.",
+      },
+      {
+        year: 2023,
+        ranges: { high: 38, mid: 34, low: 31 },
+        notes: "Consistent demand across both public and private institutions.",
+      },
+    ],
+    jobMarketTrends: {
+      demandOutlook:
+        "High demand in corporate sector for finance, HR, and marketing professionals. Kenya's startup ecosystem is rapidly expanding, creating entrepreneurship opportunities.",
+      trends: [
+        "Strong growth in corporate sector businesses",
+        "Expansion of digital economy creating e-commerce and fintech opportunities",
+        "Kenya's rapidly growing startup ecosystem offers entrepreneurship pathways",
+        "Increasing demand for digital marketing specialists",
+        "Growth in financial services and banking sector",
+      ],
+      challenges: [
+        "Entry-level roles are competitive without experience or certifications",
+        "Professional certifications like CPA and ACCA are essential for career advancement",
+        "Brain drain: Many top graduates migrate to developed countries",
+        "Limited senior positions in public sector compared to private sector demand",
+      ],
+    },
+    salaryInsights: {
+      entryLevel: "KES 40,000 - 100,000/month",
+      midCareer: "KES 120,000 - 350,000/month",
+      seniorLevel: "KES 500,000 - 2M+/month for executives and entrepreneurs",
+    },
+    funFacts: [
+      {
+        fact: "Every organization, regardless of size or industry, needs business professionals. BCom graduates can work in nearly any sector.",
+        category: "surprising",
+      },
+      {
+        fact: "Many of Kenya's top CEOs and business leaders have BCom degrees, making it a common path to leadership roles.",
+        category: "historical",
+      },
+      {
+        fact: "Kenya has one of Africa's fastest-growing startup scenes, and business graduates play a big role in this growth.",
+        category: "kenya-specific",
+      },
+      {
+        fact: "Professional certifications like CPA and ACCA can double your salary compared to those without them.",
+        category: "surprising",
+      },
+      {
+        fact: "Digital marketing is one of the fastest-growing careers for modern BCom graduates with technology skills.",
+        category: "surprising",
+      },
+      {
+        fact: "BCom graduates are among the most employable graduates because nearly every organization needs business skills.",
+        category: "kenya-specific",
+      },
+    ],
   },
   {
     id: "d-be-002",
@@ -2228,14 +2470,16 @@ const degreeCourses: Course[] = [
     description:
       "A four-year professional law degree covering constitutional law, criminal law, commercial law, and international law. Graduates must complete the Kenya School of Law programme.",
     kcseRequirements:
-      "Mean grade B+ (plus). Must have B+ in English, B in Mathematics and any two humanities.",
+      "KCSE Mean Grade: C+ and above. English (very important), History or Government, Any arts/humanities subject, Mathematics or any science subject (varies by institution). Typical cluster cut-off: 38-46 points.",
     careerPaths: [
-      "Advocate",
-      "Magistrate",
-      "Legal Counsel",
-      "State Prosecutor",
-      "Corporate Lawyer",
+      "Advocate / Lawyer",
+      "Corporate Legal Advisor",
+      "Legal Officer in Government",
       "Human Rights Lawyer",
+      "Judge or Magistrate",
+      "Policy Analyst",
+      "Legal Researcher",
+      "Legal Consultant",
     ],
     institutions: [
       "University of Nairobi",
@@ -2243,9 +2487,147 @@ const degreeCourses: Course[] = [
       "Kenyatta University",
       "Strathmore University",
       "Kabarak University",
+      "Maseno University",
+      "Kisii University",
     ],
     sourceCitation:
       "KUCCPS Programme Catalogue; Council of Legal Education — https://cle.or.ke",
+    aboutCareer:
+      "Bachelor of Laws is a professional degree that focuses on understanding legal systems, laws, and the administration of justice. It equips students with knowledge and skills to practice law, provide legal advice, and work in governance, human rights, and policy development. The course covers areas such as constitutional law, criminal law, civil law, corporate law, and international law. It emphasizes critical thinking, legal research, argumentation, and ethical reasoning.",
+    academicStructure:
+      "4 years (8 semesters). Year 1: Introduction to Law, Legal Systems & Sources of Law, Constitutional Law, Contract Law, Legal Writing & Research. Year 2: Criminal Law, Tort Law, Property Law, Equity and Trusts, Civil Procedure. Year 3: Company Law, Labour & Employment Law, Environmental Law, Family Law, Evidence Law. Year 4: International Law, Tax Law, Intellectual Property Law, Moot Court & Legal Clinics, Law Research Project. Graduates must then complete the Kenya School of Law programme for admission to the bar.",
+    technicalSkills: [
+      "Legal research and analysis",
+      "Critical thinking and reasoning",
+      "Argumentation and advocacy",
+      "Drafting legal documents",
+      "Ethical decision-making",
+      "Problem-solving",
+      "Litigation and courtroom skills",
+    ],
+    softSkills: [
+      "Communication and persuasion",
+      "Negotiation skills",
+      "Teamwork and collaboration",
+      "Attention to detail",
+      "Time management",
+      "Emotional intelligence",
+      "Ethical integrity",
+    ],
+    careerPathways: [
+      {
+        title: "Advocate / Private Practice Lawyer",
+        description: "Practice law in private law firms or as an independent advocate. Represent clients in civil, criminal, and commercial matters.",
+      },
+      {
+        title: "Corporate Legal Advisor",
+        description: "Work as in-house counsel in corporations, advising on contracts, compliance, intellectual property, and corporate governance.",
+      },
+      {
+        title: "Government Legal Service",
+        description: "Work as legal officer in government ministries, state corporations, or provide legal counsel to government agencies.",
+      },
+      {
+        title: "Judicial Officer",
+        description: "Pursue careers as judges or magistrates after further training and experience. Administer justice and hear legal cases.",
+      },
+      {
+        title: "Human Rights & Development",
+        description: "Work with NGOs, international organizations, or government on human rights, policy development, and justice reform.",
+      },
+      {
+        title: "Legal Academic & Researcher",
+        description: "Teach law in universities and conduct legal research contributing to jurisprudence and legal development.",
+      },
+    ],
+    thingsToConsider: [
+      {
+        challenge: "Highly Competitive Job Market",
+        description: "The legal profession is competitive, especially for high-paying positions. Networking and specialization are crucial.",
+      },
+      {
+        challenge: "Extensive Reading & Research",
+        description: "Law requires constant reading, legal research, and staying updated with new laws and precedents.",
+      },
+      {
+        challenge: "High Pressure Work Environment",
+        description: "Court work, client management, and tight deadlines can create high-pressure situations.",
+      },
+      {
+        challenge: "Professional Responsibility",
+        description: "Lawyers bear ethical responsibility and must maintain high standards of integrity and professional conduct.",
+      },
+      {
+        challenge: "Long Training Period",
+        description: "After LLB, graduates must complete Kenya School of Law, pupillage, and bar admission before practicing independently.",
+      },
+    ],
+    detailedInstitutions: [
+      { type: "public", name: "University of Nairobi - Faculty of Law", location: "Nairobi", notes: "Kenya's leading law school with strong reputation" },
+      { type: "public", name: "Moi University - Faculty of Law", location: "Eldoret", notes: "Well-established law programme" },
+      { type: "public", name: "Kenyatta University - Faculty of Law", location: "Nairobi", notes: "Growing law education hub" },
+      { type: "private", name: "Strathmore University - Law School", location: "Nairobi", notes: "Prestigious private law school with strong placement record" },
+      { type: "public", name: "Maseno University - Faculty of Law", location: "Kisumu", notes: "Public law school in western Kenya" },
+    ],
+    clusterRequirements:
+      "Compulsory: English/Kiswahili (very important). Core subjects: History or Government, Any arts/humanities subject, Mathematics or any science subject (varies by institution). Mean grade C+ and above calculated from best four subjects.",
+    cutoffHistory: [
+      {
+        year: 2024,
+        ranges: { high: 44, mid: 41, low: 38 },
+        notes: "High competition due to prestige of law profession. Most admitted students had B+ or above.",
+      },
+      {
+        year: 2023,
+        ranges: { high: 45, mid: 42, low: 39 },
+        notes: "Consistent competition levels across admission cycles.",
+      },
+    ],
+    jobMarketTrends: {
+      demandOutlook:
+        "Strong and consistent demand for lawyers in Kenya across private practice, government, corporate sector, and NGOs. Emerging fields like cybersecurity law and environmental law are creating new specialization opportunities.",
+      trends: [
+        "Growing need for corporate lawyers and legal advisors in expanding private sector",
+        "Increased demand for lawyers in environmental law and climate change issues",
+        "Rising need for cybersecurity and technology law specialists",
+        "Expansion of human rights and social justice law careers",
+        "Growing international arbitration and cross-border legal work",
+      ],
+      challenges: [
+        "Brain drain: Many Kenyan lawyers practice internationally for better remuneration",
+        "Limited judicial appointments in public sector relative to demand",
+        "Entry-level lawyer positions competitive with relatively lower starting salaries",
+        "High compliance requirements and continuing legal education costs",
+        "Specialization often needed for competitive advantage in practice",
+      ],
+    },
+    salaryInsights: {
+      entryLevel: "KES 40,000 - 100,000/month (junior advocate/legal officer)",
+      midCareer: "KES 150,000 - 400,000/month",
+      seniorLevel: "KES 500,000+/month for senior advocates and partners",
+    },
+    funFacts: [
+      {
+        fact: "Law is one of the oldest and most respected professions, with codes of conduct dating back centuries.",
+        category: "historical",
+      },
+      {
+        fact: "Kenya's legal system is based on English Common Law, making Kenyan lawyers competitive in Commonwealth countries.",
+        category: "kenya-specific",
+      },
+      {
+        fact: "The University of Nairobi School of Law was established in 1963, the same year Kenya gained independence.",
+        category: "historical",
+      },
+      {
+        fact: "Kenya's new constitution (2010) created numerous opportunities for constitutional law specialists.",
+        category: "kenya-specific",
+      },
+      {
+        fact: "International Law and Human Rights law are among the fastest-growing specializations for Kenyan lawyers.",
+        category: "surprising",
+      },
+    ],
   },
   {
     id: "d-lg-002",
@@ -3401,7 +3783,7 @@ const degreeCourses: Course[] = [
   },
 ]
 
-// ──────────────────────────────────────────────
+// ─────────────────────────────���────────────────
 //  DIPLOMA PROGRAMMES
 // ──────────────────────────────────────────────
 

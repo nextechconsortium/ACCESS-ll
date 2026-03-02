@@ -1,5 +1,6 @@
 import { streamText } from "ai"
 import { openai } from "@ai-sdk/openai"
+import { generateAISystemPrompt } from "@/lib/site-content"
 
 export const maxDuration = 30
 
@@ -7,16 +8,12 @@ export async function POST(req: Request) {
   try {
     const { messages } = await req.json()
 
+    // Generate dynamic system prompt with current site content
+    const systemPrompt = generateAISystemPrompt()
+
     const result = streamText({
       model: openai("gpt-4o"),
-      system: `You are a helpful AI career assistant for the ACCESS platform. You specialize in:
-      - Career guidance and advice
-      - Academic planning and study strategies
-      - University and scholarship information
-      - Professional development
-      - Educational pathways
-      
-      Provide personalized, actionable advice based on the user's questions. Be encouraging, informative, and supportive. Focus on helping students make informed decisions about their academic and career futures.`,
+      system: systemPrompt,
       messages,
     })
 

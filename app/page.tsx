@@ -264,7 +264,7 @@ export default function HomePage() {
                 <CardContent className="p-5 text-center">
                   <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden mb-4 ring-2 ring-[#2066c3]/30">
                     <Image
-                      src="/founders/fadhili-darren.png"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Fadhili%20Darren-AdRPAHZH3F92YQJctpEZ2nrrqh5V0P.png"
                       alt="Fadhili Darren"
                       fill
                       className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
@@ -464,6 +464,25 @@ export default function HomePage() {
                     <Users className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Powered by NexTech Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-[#2066c3]/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col items-center justify-center gap-6">
+              <p className="text-slate-400 text-lg text-center">
+                Powered by NexTech
+              </p>
+              <div className="relative w-32 h-32">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/InShot_20250819_233556855-yPr5HQT7PeakT82NVFgjTQFIA4J09b.png"
+                  alt="NexTech Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
