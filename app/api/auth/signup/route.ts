@@ -53,11 +53,21 @@ export async function POST(request: NextRequest) {
     })
 
     if (signupError || !data.user) {
+      console.error("[v0] Auth signup error:", {
+        message: signupError?.message,
+        status: signupError?.status,
+        name: signupError?.name,
+      })
       return NextResponse.json(
         { message: signupError?.message || "Failed to create account" },
         { status: 400 }
       )
     }
+    
+    console.log("[v0] User created successfully:", {
+      userId: data.user.id,
+      email: data.user.email,
+    })
 
     // Create user profile
     const { error: profileError } = await supabase
@@ -76,8 +86,16 @@ export async function POST(request: NextRequest) {
       ])
 
     if (profileError) {
+      console.error("[v0] Profile creation error:", {
+        message: profileError.message,
+        details: profileError.details,
+        hint: profileError.hint,
+      })
       return NextResponse.json(
-        { message: "Failed to create user profile" },
+        { 
+          message: profileError.message || "Failed to create user profile",
+          details: profileError.details || "Check RLS policies and database connection"
+        },
         { status: 400 }
       )
     }

@@ -40,7 +40,7 @@ export default function SignupPage() {
       }
 
       // Redirect to signin after successful signup
-      router.push("/auth/signin?message=Account created successfully. Please sign in.")
+      router.push("/signin?message=Account created successfully. Please sign in.")
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred during signup")
     } finally {
