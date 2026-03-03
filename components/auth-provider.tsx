@@ -1,20 +1,19 @@
 "use client"
 
 import type React from "react"
-
 import { createContext, useContext, useEffect, useState } from "react"
-import { type User, onAuthStateChanged, signOut as firebaseSignOut } from "firebase/auth"
-import { auth } from "@/lib/firebase"
 import { useRouter } from "next/navigation"
+import { supabase } from "@/lib/supabase-client"
+import type { Session } from "@supabase/supabase-js"
 
 interface AuthContextType {
-  user: User | null
+  session: Session | null
   loading: boolean
   signOut: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType>({
-  user: null,
+  session: null,
   loading: true,
   signOut: async () => {},
 })
@@ -28,39 +27,66 @@ export const useAuth = () => {
 }
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null)
+  const [session, setSession] = useState<Session | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(
-      auth,
-      (user) => {
-        setUser(user)
-        setLoading(false)
-      },
-      (error) => {
-        console.error("Auth state change error:", error)
-        setUser(null)
-        setLoading(false)
-      },
-    )
+    // Check for existing session on mount
+    const checkSession = async () => {
+      try {
+        if (!supabase) {
+          console.warn("[v0] Supabase client not initialized - auth features unavailable")
+          setLoading(false)
+          return
+        }
 
-    return () => unsubscribe()
+        const {
+          data: { session: currentSession },
+        } = await supabase.auth.getSession()
+        setSession(currentSession)
+      } catch (error) {
+        console.error("[v0] Session check error:", error instanceof Error ? error.message : error)
+        setSession(null)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    checkSession()
+
+    // Listen for auth state changes
+    if (supabase) {
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((event, session) => {
+        console.log("[v0] Auth state changed:", event)
+        setSession(session)
+      })
+
+      return () => {
+        subscription?.unsubscribe()
+      }
+    }
   }, [])
 
   const signOut = async () => {
     try {
-      await firebaseSignOut(auth)
-      setUser(null)
+      if (!supabase) {
+        console.error("[v0] Supabase client not initialized")
+        return
+      }
+
+      await supabase.auth.signOut()
+      setSession(null)
       router.push("/")
     } catch (error) {
-      console.error("Sign out error:", error)
+      console.error("[v0] Sign out error:", error instanceof Error ? error.message : error)
     }
   }
 
   const value = {
-    user,
+    session,
     loading,
     signOut,
   }
