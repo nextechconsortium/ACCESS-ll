@@ -3,18 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import {
-  collection,
-  addDoc,
-  query,
-  orderBy,
-  onSnapshot,
-  serverTimestamp,
-  updateDoc,
-  doc,
-  arrayUnion,
-} from "firebase/firestore"
-import { db } from "@/lib/firebase"
+// Firestore imports removed - Supabase integration in progress
 import { useAuth } from "@/components/auth-provider"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
@@ -95,9 +84,9 @@ export default function ChatboxPage() {
   const { toast } = useToast()
 
   useEffect(() => {
-    const q = query(collection(db, "posts"), orderBy("timestamp", "desc"))
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const postsData: Post[] = []
+    // Firestore implementation replaced with Supabase
+    // TODO: Implement Supabase real-time posts subscription
+    const postsData: Post[] = []
       querySnapshot.forEach((doc) => {
         const data = doc.data()
         postsData.push({

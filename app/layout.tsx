@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "ACCESS - Power To Choose Better",
   description: "Connect with mentors, discover opportunities, and make informed career choices with ACCESS platform.",
   keywords: "mentorship, career guidance, scholarships, university abroad, entrepreneurship, student platform",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
