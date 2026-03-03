@@ -182,7 +182,7 @@ export function AuthForm({ mode, onSubmit, isLoading }: AuthFormProps) {
 
         <p className="text-center text-sm text-slate-600">
           Don't have an account?{" "}
-          <Link href="/auth/signup" className="text-[#2066c3] hover:underline">
+          <Link href="/signup" className="text-[#2066c3] hover:underline">
             Sign up
           </Link>
         </p>
@@ -353,7 +353,7 @@ export function AuthForm({ mode, onSubmit, isLoading }: AuthFormProps) {
 
       <p className="text-center text-sm text-slate-600">
         Already have an account?{" "}
-        <Link href="/auth/signin" className="text-[#2066c3] hover:underline">
+        <Link href="/signin" className="text-[#2066c3] hover:underline">
           Sign in
         </Link>
       </p>

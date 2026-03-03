@@ -97,7 +97,7 @@ export default function Navbar() {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link href="/auth">
+              <Link href="/signin">
                 <Button className="neon-button text-white font-semibold">Sign In</Button>
               </Link>
             )}
@@ -170,7 +170,7 @@ export default function Navbar() {
                     </Button>
                   </div>
                 ) : (
-                  <Link href="/auth" onClick={() => setMobileMenuOpen(false)}>
+                  <Link href="/signin" onClick={() => setMobileMenuOpen(false)}>
                     <Button className="w-full neon-button text-white font-semibold">Sign In</Button>
                   </Link>
                 )}

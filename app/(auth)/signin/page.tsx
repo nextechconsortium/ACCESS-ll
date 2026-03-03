@@ -14,6 +14,8 @@ export default function SigninPage() {
   const [error, setError] = useState<string | null>(null)
   const [successMessage, setSuccessMessage] = useState<string | null>(null)
 
+  console.log("[v0] Sign In page loaded")
+
   useEffect(() => {
     // Get success message from URL params
     const message = searchParams.get("message")

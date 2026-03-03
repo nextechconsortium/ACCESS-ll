@@ -8,7 +8,7 @@ export default function AuthPage() {
 
   useEffect(() => {
     // Redirect to the new signin page
-    router.replace("/(auth)/signin")
+    router.replace("/signin")
   }, [router])
 
   return null
