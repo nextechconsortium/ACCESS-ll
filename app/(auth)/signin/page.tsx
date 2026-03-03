@@ -169,7 +169,7 @@ export default function SigninPage() {
 
           <p className="text-center text-xs text-slate-600 mt-6">
             Don't have an account?{" "}
-            <Link href="/auth/signup" className="text-[#2066c3] hover:underline font-semibold">
+            <Link href="/signup" className="text-[#2066c3] hover:underline font-semibold">
               Create one
             </Link>
           </p>
